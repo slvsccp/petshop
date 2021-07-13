@@ -1,4 +1,4 @@
-/* open and close the menu, when click in icon: hamburguer and X*/
+/* open and close the menu, when click in icon: hamburguer and X */
 const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
 
@@ -8,7 +8,7 @@ for (const element of toggle) {
   })
 }
 
-/* when clicking on a menu item, hide the menu*/
+/* when clicking on a menu item, hide the menu */
 const links = document.querySelectorAll('nav ul li a')
 
 for (const link of links) {
@@ -27,4 +27,14 @@ window.addEventListener('scroll', function () {
   } else {
     header.classList.remove('scroll')
   }
+})
+
+/* testimonials carousel slider swiper */
+const swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  mousewheel: true,
+  keyboard: true
 })
